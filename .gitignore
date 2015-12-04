@@ -59,3 +59,6 @@ target/
 # VirtualENV stuff
 Include/
 Scripts/
+
+# Nosetests
+nosetests.json
