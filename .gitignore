@@ -62,3 +62,6 @@ Scripts/
 
 # Nosetests
 nosetests.json
+
+# ignoring sample input files
+*.secret
