@@ -1,3 +1,9 @@
-
 def travel(string):
-    return len(string) + 1
+    x = 0
+    y = 0
+    houses = set([(x, y)])
+    for character in string:
+        if character == '>':
+            x += 1
+        houses.add((x, y))
+    return len(houses)
