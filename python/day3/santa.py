@@ -9,7 +9,10 @@ def travel(string):
             x -= 1
         if character == '^':
             y += 1
-        if character == 'V':
+        if character == 'v':
             y -= 1
         houses.add((x, y))
-    return len(houses)
+    houses_visited = len(houses)
+    print ("Santa visited " + str(houses_visited) + " houses")
+    print (str(houses))
+    return houses_visited
