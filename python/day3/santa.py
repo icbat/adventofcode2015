@@ -1,19 +1,23 @@
 def travel(string):
     santa = Santa()
+    robo_santa = Santa()
     houses = set([santa.where_are_you()])
-    for character in string:
+    for index, character in enumerate(string):
+        if (index % 2 == 0):
+            active_santa = santa
+        else:
+            active_santa = robo_santa
         if character == '>':
-            santa.move_right()
+            active_santa.move_right()
         if character == '<':
-            santa.move_left()
+            active_santa.move_left()
         if character == '^':
-            santa.move_up()
+            active_santa.move_up()
         if character == 'v':
-            santa.move_down()
-        houses.add(santa.where_are_you())
+            active_santa.move_down()
+        houses.add(active_santa.where_are_you())
     houses_visited = len(houses)
     print ("Santa visited " + str(houses_visited) + " houses")
-    print (str(houses))
     return houses_visited
 
 class Santa(object):
