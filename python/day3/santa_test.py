@@ -11,3 +11,10 @@ def test_santa_square_movement():
 
 def test_santa_back_and_forth():
     assert 2 == santa.travel("^v^v^v^v^v")
+
+def test_actual_from_file():
+    content = []
+    with open("input.secret") as f:
+        content = f.readlines()
+
+    assert 2081 == santa.travel(content[0])
