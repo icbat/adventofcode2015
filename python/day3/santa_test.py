@@ -10,6 +10,7 @@ def test_santa_square_movement():
     assert 4 == santa.travel("^>v<")
 
 def test_santa_back_and_forth():
+    assert 2 == santa.travel("^v")
     assert 2 == santa.travel("^v^v^v^v^v")
 
 def test_actual_from_file():
