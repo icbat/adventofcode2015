@@ -1,3 +1,3 @@
 
 def travel(string):
-    return 1
+    return len(string) + 1
