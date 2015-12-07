@@ -33,3 +33,6 @@ def test_qjhvhtzxzqqjkmpb():
 
 def test_xxyxx():
     assert naught_nice.new_niceness("xxyxx")
+
+def test_repeating_with_one_between():
+    assert False == naught_nice.new_niceness("uurcxstgmygtbstg")
