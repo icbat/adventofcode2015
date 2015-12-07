@@ -28,6 +28,9 @@ def has_double_letter(string):
     return False
 
 def new_niceness(string):
+    return has_xYx(string)
+
+def has_xYx(string):
     last = ""
     laster = ""
     for character in string:
