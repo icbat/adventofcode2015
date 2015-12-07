@@ -28,7 +28,7 @@ def has_double_letter(string):
     return False
 
 def new_niceness(string):
-    return has_xYx(string)
+    return has_xYx(string) and double_pair(string)
 
 def has_xYx(string):
     last = ""
@@ -38,4 +38,15 @@ def has_xYx(string):
             return True
         laster = last
         last = character
+    return False
+
+def double_pair(string):
+    last = ""
+    for index, character in enumerate(string):
+        pair = last + character
+        if (len(pair) == 2):
+            if pair in string[index + 1:]:
+                return True
+        last = character
+
     return False

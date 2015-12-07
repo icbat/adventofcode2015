@@ -15,7 +15,7 @@ def test_lacks_enough_vowels():
 def test_has_double_letters():
     assert False == naught_nice.niceness("jchzalrnumimnmhp")
 
-def test_actual_input():
+def test_actual_part1():
     content = []
     with open("input.secret") as f:
         content = f.readlines()
@@ -36,3 +36,22 @@ def test_xxyxx():
 
 def test_repeating_with_one_between():
     assert False == naught_nice.new_niceness("uurcxstgmygtbstg")
+
+def test_pair_appears_twice():
+    assert False == naught_nice.new_niceness("ieodomkazucvgmuy")
+
+def test_pair_appears_twice_but_not_overlapping():
+    assert False == naught_nice.double_pair("aaa")
+
+def test_actual_part2():
+    content = []
+    with open("input.secret") as f:
+        content = f.readlines()
+
+    nice_strings = 0
+    for line in content:
+        if naught_nice.new_niceness(line):
+            nice_strings += 1
+
+    print (nice_strings)
+    assert 53 == nice_strings
