@@ -2,3 +2,9 @@ import naught_nice
 
 def test_aaa():
     assert naught_nice.niceness("aaa")
+
+def test_ugknbfddgicrmopn():
+    assert naught_nice.niceness("ugknbfddgicrmopn")
+
+def test_lacks_contains_evil_string():
+    assert False == naught_nice.niceness("haegwjzuvuyypxyu")
