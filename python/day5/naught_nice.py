@@ -1,5 +1,5 @@
 def niceness(string):
-    return contains_evil(string) and has_enough_vowels(string)
+    return contains_evil(string) and has_enough_vowels(string) and has_double_letter(string)
 
 
 def contains_evil(string):
@@ -17,3 +17,12 @@ def has_enough_vowels(string):
             vowel_count += 1
 
     return vowel_count >= 3
+
+def has_double_letter(string):
+    last = ""
+    for character in string:
+        if character == last:
+            return True
+        last = character
+
+    return False

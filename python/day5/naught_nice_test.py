@@ -11,3 +11,6 @@ def test_lacks_contains_evil_string():
 
 def test_lacks_enough_vowels():
     assert False == naught_nice.niceness("dvszwmarrgswjxmb")
+
+def test_has_double_letters():
+    assert False == naught_nice.niceness("jchzalrnumimnmhp")
