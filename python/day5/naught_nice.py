@@ -26,3 +26,6 @@ def has_double_letter(string):
         last = character
 
     return False
+
+def new_niceness(string):
+    return True

@@ -27,3 +27,9 @@ def test_actual_input():
 
     print (nice_strings)
     assert 258 == nice_strings
+
+def test_qjhvhtzxzqqjkmpb():
+    assert naught_nice.new_niceness("qjhvhtzxzqqjkmpb")
+
+def test_xxyxx():
+    assert naught_nice.new_niceness("xxyxx")
