@@ -14,3 +14,16 @@ def test_lacks_enough_vowels():
 
 def test_has_double_letters():
     assert False == naught_nice.niceness("jchzalrnumimnmhp")
+
+def test_actual_input():
+    content = []
+    with open("input.secret") as f:
+        content = f.readlines()
+
+    nice_strings = 0
+    for line in content:
+        if naught_nice.niceness(line):
+            nice_strings += 1
+
+    print (nice_strings)
+    assert 258 == nice_strings
